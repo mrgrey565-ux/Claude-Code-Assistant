@@ -1,0 +1,312 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "claude code assistant",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "BuildFeatureIntent",
+          "slots": [
+            {
+              "name": "featureName",
+              "type": "FEATURE_TYPE"
+            },
+            {
+              "name": "techStack",
+              "type": "TECH_STACK"
+            }
+          ],
+          "samples": [
+            "build a {featureName} feature",
+            "add {featureName} to my website",
+            "create a new {featureName}",
+            "I need a {featureName} feature using {techStack}",
+            "build {featureName} with {techStack}",
+            "generate code for {featureName}",
+            "help me add {featureName}",
+            "make a {featureName} component"
+          ]
+        },
+        {
+          "name": "FixBugIntent",
+          "slots": [
+            {
+              "name": "bugDescription",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "componentName",
+              "type": "COMPONENT_TYPE"
+            }
+          ],
+          "samples": [
+            "fix the bug in {componentName}",
+            "there is a bug in {componentName}",
+            "my {componentName} is broken",
+            "debug {componentName}",
+            "fix {bugDescription}",
+            "something is wrong with {componentName}",
+            "the {componentName} is not working",
+            "repair my {componentName}"
+          ]
+        },
+        {
+          "name": "ImproveCodeIntent",
+          "slots": [
+            {
+              "name": "improvementType",
+              "type": "IMPROVEMENT_TYPE"
+            },
+            {
+              "name": "targetArea",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "improve {improvementType} of my website",
+            "make my website more {improvementType}",
+            "optimize {targetArea}",
+            "refactor {targetArea}",
+            "clean up my code",
+            "make my code more professional",
+            "improve performance",
+            "enhance the user interface"
+          ]
+        },
+        {
+          "name": "GetInstructionsIntent",
+          "slots": [
+            {
+              "name": "taskName",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "give me instructions for {taskName}",
+            "how do I implement {taskName}",
+            "show me how to add {taskName}",
+            "walk me through {taskName}",
+            "explain {taskName} step by step",
+            "guide me through {taskName}"
+          ]
+        },
+        {
+          "name": "GrantPermissionIntent",
+          "slots": [],
+          "samples": [
+            "yes go ahead",
+            "yes you can proceed",
+            "I allow it",
+            "permission granted",
+            "yes do it",
+            "proceed",
+            "yes",
+            "go ahead",
+            "I approve",
+            "that looks good"
+          ]
+        },
+        {
+          "name": "DenyPermissionIntent",
+          "slots": [],
+          "samples": [
+            "no do not proceed",
+            "stop",
+            "cancel the changes",
+            "no I do not allow it",
+            "deny",
+            "do not do it",
+            "no",
+            "hold on",
+            "wait",
+            "abort"
+          ]
+        },
+        {
+          "name": "ModifyInstructionIntent",
+          "slots": [
+            {
+              "name": "modification",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "instead {modification}",
+            "change it to {modification}",
+            "modify to {modification}",
+            "adjust {modification}",
+            "update the approach to {modification}",
+            "divert to {modification}",
+            "redirect to {modification}"
+          ]
+        },
+        {
+          "name": "ShowCodeIntent",
+          "slots": [
+            {
+              "name": "codeSection",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "show me the code",
+            "display the generated code",
+            "show {codeSection} code",
+            "what does the code look like",
+            "show before and after",
+            "show me the changes"
+          ]
+        },
+        {
+          "name": "ConfirmReplacementIntent",
+          "slots": [],
+          "samples": [
+            "replace the code",
+            "apply the changes",
+            "confirm replacement",
+            "yes replace it",
+            "update the code",
+            "make the changes"
+          ]
+        },
+        {
+          "name": "StartOverIntent",
+          "slots": [],
+          "samples": [
+            "start over",
+            "start again",
+            "reset",
+            "begin again",
+            "let us start fresh"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "FEATURE_TYPE",
+          "values": [
+            { "name": { "value": "login", "synonyms": ["authentication", "sign in", "auth"] } },
+            { "name": { "value": "navbar", "synonyms": ["navigation bar", "menu", "header navigation"] } },
+            { "name": { "value": "dashboard", "synonyms": ["admin panel", "control panel"] } },
+            { "name": { "value": "contact form", "synonyms": ["form", "contact page"] } },
+            { "name": { "value": "search", "synonyms": ["search bar", "search functionality"] } },
+            { "name": { "value": "carousel", "synonyms": ["slider", "image slider"] } },
+            { "name": { "value": "modal", "synonyms": ["popup", "dialog box"] } },
+            { "name": { "value": "footer", "synonyms": ["bottom section"] } },
+            { "name": { "value": "dark mode", "synonyms": ["night mode", "theme toggle"] } },
+            { "name": { "value": "payment gateway", "synonyms": ["checkout", "payment form"] } },
+            { "name": { "value": "user profile", "synonyms": ["profile page", "account page"] } },
+            { "name": { "value": "notification system", "synonyms": ["alerts", "notifications"] } },
+            { "name": { "value": "data table", "synonyms": ["table", "grid"] } },
+            { "name": { "value": "API integration", "synonyms": ["REST API", "API connection"] } },
+            { "name": { "value": "file upload", "synonyms": ["upload feature", "file manager"] } }
+          ]
+        },
+        {
+          "name": "TECH_STACK",
+          "values": [
+            { "name": { "value": "React", "synonyms": ["React JS", "ReactJS"] } },
+            { "name": { "value": "Vue", "synonyms": ["Vue JS", "VueJS"] } },
+            { "name": { "value": "Angular", "synonyms": ["Angular JS"] } },
+            { "name": { "value": "vanilla JavaScript", "synonyms": ["plain JavaScript", "pure JS"] } },
+            { "name": { "value": "HTML CSS", "synonyms": ["HTML and CSS", "basic web"] } },
+            { "name": { "value": "Next.js", "synonyms": ["NextJS", "Next JS"] } },
+            { "name": { "value": "Tailwind", "synonyms": ["Tailwind CSS"] } },
+            { "name": { "value": "Bootstrap", "synonyms": ["Bootstrap CSS"] } },
+            { "name": { "value": "Node.js", "synonyms": ["NodeJS", "Express"] } },
+            { "name": { "value": "Python", "synonyms": ["Flask", "Django"] } }
+          ]
+        },
+        {
+          "name": "COMPONENT_TYPE",
+          "values": [
+            { "name": { "value": "navbar", "synonyms": ["navigation", "header"] } },
+            { "name": { "value": "login form", "synonyms": ["login", "sign in form"] } },
+            { "name": { "value": "API call", "synonyms": ["fetch request", "API request"] } },
+            { "name": { "value": "button", "synonyms": ["submit button", "click handler"] } },
+            { "name": { "value": "modal", "synonyms": ["popup", "dialog"] } },
+            { "name": { "value": "database connection", "synonyms": ["DB connection", "database"] } },
+            { "name": { "value": "authentication", "synonyms": ["auth", "login system"] } },
+            { "name": { "value": "state management", "synonyms": ["state", "Redux"] } }
+          ]
+        },
+        {
+          "name": "IMPROVEMENT_TYPE",
+          "values": [
+            { "name": { "value": "professional", "synonyms": ["cleaner", "polished"] } },
+            { "name": { "value": "performant", "synonyms": ["faster", "optimized"] } },
+            { "name": { "value": "accessible", "synonyms": ["accessible", "WCAG compliant"] } },
+            { "name": { "value": "responsive", "synonyms": ["mobile friendly", "adaptive"] } },
+            { "name": { "value": "secure", "synonyms": ["safe", "protected"] } },
+            { "name": { "value": "readable", "synonyms": ["clean", "maintainable"] } }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "BuildFeatureIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "featureName",
+              "type": "FEATURE_TYPE",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.featureName"
+              }
+            },
+            {
+              "name": "techStack",
+              "type": "TECH_STACK",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.techStack"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "SKILL_RESPONSE"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.featureName",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What feature would you like me to build? For example, login, navbar, dashboard, or contact form."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.techStack",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which technology stack are you using? React, Vue, Angular, vanilla JavaScript, or something else?"
+          }
+        ]
+      }
+    ]
+  }
+}
