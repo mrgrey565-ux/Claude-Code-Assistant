@@ -1,0 +1,55 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Claude Code Assistant",
+          "summary": "AI-powered code assistant that builds features, fixes bugs, and guides code replacement",
+          "description": "Claude Code Assistant helps developers build new features, fix bugs, and make websites more professional. It generates complete code with before/after comparisons, line-by-line instructions, and asks permission before making changes.",
+          "examplePhrases": [
+            "Alexa, open Claude Code Assistant",
+            "Add a new login feature",
+            "Fix the bug in my navbar"
+          ],
+          "keywords": [
+            "code",
+            "developer",
+            "assistant",
+            "claude",
+            "programming",
+            "bug fix",
+            "feature"
+          ],
+          "smallIconUri": "https://your-bucket.s3.amazonaws.com/small-icon.png",
+          "largeIconUri": "https://your-bucket.s3.amazonaws.com/large-icon.png"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Enable skill and say: open Claude Code Assistant",
+      "category": "PRODUCTIVITY_AND_UTILITIES",
+      "distributionCountries": ["US"]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda"
+        },
+        "interfaces": []
+      }
+    },
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://your-site.com/privacy",
+          "termsOfUseUrl": "https://your-site.com/terms"
+        }
+      }
+    }
+  }
+}
